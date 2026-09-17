@@ -1,0 +1,1 @@
+import Link from "next/link";export default function NotFound(){return <section className="page"><span className="eyebrow">404</span><h1>Asset not found.</h1><p className="lede">This identifier isn't in the exchange universe yet.</p><Link className="button" href="/">Return to exchange</Link></section>}
