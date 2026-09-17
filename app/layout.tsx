@@ -1,0 +1,3 @@
+import "./globals.css";import Header from "@/components/Header";import type {Metadata} from "next";
+export const metadata:Metadata={title:{default:"Asset Exchange — Track the Value of Everything",template:"%s | Asset Exchange"},description:"Cross-asset market intelligence, tracking and valuation.",metadataBase:new URL(process.env.NEXT_PUBLIC_SITE_URL||"http://localhost:3000")};
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="en"><body><Header/><main>{children}</main><footer><div><b>Asset Exchange</b><p>Universal market intelligence infrastructure.</p></div><div>Demo values are illustrative estimates, not live quotes or financial advice.</div></footer></body></html>}
