@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function Header(){return <header className="top"><Link href="/" className="brand"><span className="mark">AE</span><b>Asset Exchange</b></Link><nav><Link href="/markets">Markets</Link><Link href="/screener">Screener</Link><Link href="/portfolio">Portfolio</Link><Link href="/watchlist">Watchlist</Link></nav><Link className="button ghost" href="/methodology">Methodology</Link></header>}
