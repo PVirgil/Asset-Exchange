@@ -1,0 +1,1 @@
+import {NextResponse} from "next/server";import {getAsset} from "@/lib/data";export async function GET(_:Request,{params}:{params:{slug:string}}){const a=getAsset(params.slug);return a?NextResponse.json({data:a,meta:{demo:true}}):NextResponse.json({error:"Not found"},{status:404})}
