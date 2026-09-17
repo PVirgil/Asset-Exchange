@@ -1,4 +1,4 @@
-# Asset Exchang
+# Asset Exchange
 
 > **Track the value of everything.**
 
