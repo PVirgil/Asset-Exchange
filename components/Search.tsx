@@ -1,0 +1,3 @@
+"use client";
+import {useMemo,useState} from "react"; import Link from "next/link"; import {assets} from "@/lib/data";
+export default function Search(){const[q,setQ]=useState("");const m=useMemo(()=>q?assets.filter(a=>(a.name+a.symbol+a.assetClass).toLowerCase().includes(q.toLowerCase())).slice(0,6):[],[q]);return <div className="searchWrap"><input className="search" value={q} onChange={e=>setQ(e.target.value)} placeholder="Search stocks, crypto, property, watches, domains…"/>{m.length>0&&<div className="results">{m.map(a=><Link key={a.id} href={`/asset/${a.slug}`} onClick={()=>setQ("")}><b>{a.symbol}</b><span>{a.name}</span><small>{a.assetClass}</small></Link>)}</div>}</div>}
