@@ -1,0 +1,1 @@
+"use client";export default function Error({reset}:{reset:()=>void}){return <section className="page"><h1>Market view unavailable.</h1><p className="lede">The interface hit an unexpected error.</p><button className="button" onClick={reset}>Retry</button></section>}
