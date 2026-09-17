@@ -1,0 +1,1 @@
+import {MetadataRoute} from "next";import {assets} from "@/lib/data";export default function sitemap():MetadataRoute.Sitemap{const b=process.env.NEXT_PUBLIC_SITE_URL||"http://localhost:3000";return ["","/markets","/screener","/portfolio","/watchlist","/methodology",...assets.map(a=>`/asset/${a.slug}`)].map(p=>({url:b+p,lastModified:new Date()}))}
